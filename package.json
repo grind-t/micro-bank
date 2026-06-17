@@ -1,41 +1,28 @@
 {
-  "name": "@grind-t/lib",
+  "name": "@grind-t/micro-bank",
   "version": "1.0.0",
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
+  "private": true,
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "npx @biomejs/biome check --write",
     "test:unit": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.unit.test.ts\"",
     "test:e2e": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.e2e.test.ts\"",
     "test": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.test.ts\"",
-    "check": "npm run typecheck && npm run lint && npm run test",
-    "build": "tsup"
+    "check": "npm run typecheck && npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grind-t/lib.git"
+    "url": "git+https://github.com/grind-t/micro-bank.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/grind-t/lib/issues"
+    "url": "https://github.com/grind-t/micro-bank/issues"
   },
-  "homepage": "https://github.com/grind-t/lib#readme",
+  "homepage": "https://github.com/grind-t/micro-bank#readme",
   "devDependencies": {
     "@biomejs/biome": "latest",
-    "@microsoft/api-extractor": "latest",
-    "@swc/core": "latest",
     "@types/node": "latest",
-    "tsup": "latest",
     "typescript": "latest"
   }
 }
