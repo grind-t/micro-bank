@@ -24,5 +24,8 @@
     "@biomejs/biome": "latest",
     "@types/node": "latest",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "@grind-t/russian-bonds": "^1.0.2"
   }
 }
