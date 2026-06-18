@@ -9,7 +9,8 @@
     "test:unit": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.unit.test.ts\"",
     "test:e2e": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.e2e.test.ts\"",
     "test": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.test.ts\"",
-    "check": "npm run typecheck && npm run lint && npm run test"
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "pull:bonds": "node --env-file-if-exists=.env --experimental-transform-types src/bonds/pull.ts"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "typescript": "latest"
   },
   "dependencies": {
-    "@grind-t/russian-bonds": "^1.0.2"
+    "@duckdb/node-api": "^1.5.4-r.1",
+    "@grind-t/russian-bonds": "^1.0.2",
+    "@grind-t/toolkit": "^2.4.0",
+    "flat": "^6.0.1"
   }
 }
