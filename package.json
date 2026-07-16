@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "dev": "node --env-file-if-exists=.env --experimental-transform-types --watch playground.ts",
     "typecheck": "tsc --noEmit",
     "lint": "npx @biomejs/biome check --write",
     "test:unit": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.unit.test.ts\"",
@@ -29,6 +30,7 @@
   "dependencies": {
     "@duckdb/node-api": "^1.5.4-r.1",
     "@grind-t/russian-bonds": "^1.1.0",
+    "@grind-t/t-invest": "^1.0.0",
     "@grind-t/toolkit": "^2.4.0",
     "flat": "^6.0.1"
   }
