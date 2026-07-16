@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@duckdb/node-api": "^1.5.4-r.1",
-    "@grind-t/russian-bonds": "^1.0.2",
+    "@grind-t/russian-bonds": "^1.1.0",
     "@grind-t/toolkit": "^2.4.0",
     "flat": "^6.0.1"
   }
