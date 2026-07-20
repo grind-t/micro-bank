@@ -1,37 +1,38 @@
 {
   "name": "@grind-t/micro-bank",
   "version": "1.0.0",
-  "type": "module",
   "private": true,
-  "scripts": {
-    "dev": "node --env-file-if-exists=.env --experimental-transform-types --watch playground.ts",
-    "typecheck": "tsc --noEmit",
-    "lint": "npx @biomejs/biome check --write",
-    "test:unit": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.unit.test.ts\"",
-    "test:e2e": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.e2e.test.ts\"",
-    "test": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.test.ts\"",
-    "check": "npm run typecheck && npm run lint && npm run test",
-    "pull:bonds": "node --env-file-if-exists=.env --experimental-transform-types src/bonds/pull.ts"
+  "homepage": "https://github.com/grind-t/micro-bank#readme",
+  "bugs": {
+    "url": "https://github.com/grind-t/micro-bank/issues"
   },
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/grind-t/micro-bank.git"
   },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/grind-t/micro-bank/issues"
-  },
-  "homepage": "https://github.com/grind-t/micro-bank#readme",
-  "devDependencies": {
-    "@biomejs/biome": "latest",
-    "@types/node": "latest",
-    "typescript": "latest"
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --experimental-transform-types --watch playground.ts",
+    "fmt": "oxfmt",
+    "lint": "oxlint --fix",
+    "test:unit": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.unit.test.ts\"",
+    "test:e2e": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.e2e.test.ts\"",
+    "test": "node --experimental-transform-types --experimental-test-module-mocks --test \"src/**/*.test.ts\"",
+    "pull:bonds": "node --env-file-if-exists=.env --experimental-transform-types src/bonds/pull.ts"
   },
   "dependencies": {
     "@duckdb/node-api": "^1.5.4-r.1",
-    "@grind-t/russian-bonds": "^1.1.1",
+    "@grind-t/russian-bonds": "^1.1.2",
     "@grind-t/t-invest": "^1.0.0",
     "@grind-t/toolkit": "^2.4.0",
     "flat": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "oxfmt": "latest",
+    "oxlint": "latest",
+    "oxlint-tsgolint": "latest",
+    "typescript": "latest"
   }
 }
